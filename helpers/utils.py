@@ -143,15 +143,6 @@ async def join_and_play(audio, video, width, height):
                     bitrate=48000,
                 ),
             ),
-            InputVideoStream(
-                video,
-                VideoParameters(
-                    width=width,
-                    height=height,
-                    frame_rate=30,
-                ),
-                
-            ),
             stream_type=StreamType().local_stream
         )
         Config.CALL_STATUS=True
@@ -181,14 +172,6 @@ async def change_file(audio, video, width, height):
                 audio,
                 AudioParameters(
                     bitrate=48000,
-                ),
-            ),
-            InputVideoStream(
-                video,
-                VideoParameters(
-                    width=width,
-                    height=height,
-                    frame_rate=30,
                 ),
             ),
             )
